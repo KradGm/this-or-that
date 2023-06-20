@@ -30,19 +30,33 @@
   height: 100%;
 }
 #left{
+  display: flex;
   width: 49%;
   height: 100%;
   float: left;
   background-color: blue;
+  justify-content: center;
+  position: relative;
 }
 #right{
+  display: flex;
   width: 49%;
   height: 100%;
   float: right;
   background-color: red;
+  justify-content: center;
+  position: relative;
 }
 #middle-bar{
 width: 1px;
 background-color: black;
 float: left;
+}
+#pokemon-img{
+display: block;
+width: 150px;
+height: 150px;
+position: absolute;
+top: 50%;
+transform: translate(0, -50%);
 }
