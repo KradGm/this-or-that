@@ -9,9 +9,18 @@
 <ion-content [fullscreen]="true">
 
   <body id="body-area">
-    <div id="left"><img id="pokemon-img" src={{this.pokemonSprite1}} alt=""></div>
+    <div id="left">
+      <ion-button id="blue-button" (Click)="CallVote()">
+        <img id="pokemon-img" src={{this.pokemonSprite1}} alt="">
+      </ion-button>
+    </div>
+
     <div id="middle-bar"></div>
-    <div id="right"><img id="pokemon-img" src={{this.pokemonSprite2}} alt=""></div>
+    <div id="right">
+      <ion-button id="red-button" (Click)="CallVote()">
+        <img id="pokemon-img" src={{this.pokemonSprite2}} alt="">
+      </ion-button>
+    </div>
   </body>
 
 </ion-content>
