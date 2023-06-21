@@ -46,3 +46,16 @@ width: 1px;
 background-color: black;
 float: left;
 }
+#blue-button{
+margin: 0;
+width: 100%;
+height: 100%;
+color: red;
+}
+#red-button{
+margin: 0;
+width: 100%;
+height: 100%;
+color: blue;
+--background:red;
+}

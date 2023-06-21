@@ -6,11 +6,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
+
   <body id="body-area">
-    <div id="left"></div>
+
+    <div id="left">
+      <ion-button id="blue-button" (Click)="CallVote()"></ion-button>
+    </div>
+
     <div id="middle-bar"></div>
-    <div id="right"></div>
+    <div id="right">
+      <ion-button id="red-button" (Click)="CallVote()"></ion-button>
+    </div>
   </body>
-  
+
 </ion-content>
