@@ -9,10 +9,10 @@ import { GetPokemonsService } from '../get-pokemons.service';
 export class HomePage implements OnInit{
   pokemonSprite1!: string;
   pokemonSprite2!: string;
-  voteCount!: number;
+  voteCount = 0;
   voted = false;
   constructor(private getPokemon: GetPokemonsService) { }
-  ngOnInit() {this.Pokemon1();this.Pokemon2()}
+  ngOnInit() {this.Pokemon1();this.Pokemon2(); this.voted = false;}
   Recall(){
     this.getPokemon.Pokemon1().subscribe(data => {
       console.log(data);
@@ -39,8 +39,9 @@ export class HomePage implements OnInit{
 }
   CallVote(){
     if(this.voted != true){
-      this.voteCount++;
+      this.voteCount += 1;
       this.voted = true;
+      this.ngOnInit()
     }
   }
 }
