@@ -10,16 +10,18 @@
 
   <body id="body-area">
     <div id="left">
-      <ion-button id="blue-button" (Click)="CallVote()">
+      <ion-button id="blue-button" (click)="CallVote()">
         <img id="pokemon-img" src={{this.pokemonSprite1}} alt="">
+        <p id="number-count">{{this.voteCount}}</p>
       </ion-button>
     </div>
 
     <div id="middle-bar"></div>
     <div id="right">
-      <ion-button id="red-button" (Click)="CallVote()">
+      <ion-button id="red-button" (click)="CallVote()">
         <img id="pokemon-img" src={{this.pokemonSprite2}} alt="">
       </ion-button>
+      <p id="number-count">{{this.voteCount}}</p>
     </div>
   </body>
 
