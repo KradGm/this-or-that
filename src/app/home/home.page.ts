@@ -9,6 +9,8 @@ import { GetPokemonsService } from '../get-pokemons.service';
 export class HomePage implements OnInit{
   pokemonSprite1!: string;
   pokemonSprite2!: string;
+  voteCount!: number;
+  voted = false;
   constructor(private getPokemon: GetPokemonsService) { }
   ngOnInit() {this.Pokemon1();this.Pokemon2()}
   Recall(){
@@ -35,4 +37,10 @@ export class HomePage implements OnInit{
       console.error(error);
     });
 }
+  CallVote(){
+    if(this.voted != true){
+      this.voteCount++;
+      this.voted = true;
+    }
+  }
 }
